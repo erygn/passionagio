@@ -1,29 +1,14 @@
-# passionagio
+# PassionaGio - Client
 
-## Project setup
-```
-yarn install
-```
+## Fournisseur pour boulangerie
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+Outils de commande de matière première et de produit pour les boulangeries.
 
-### Compiles and minifies for production
+#### Comment l'utiliser
 ```
-yarn run build
-```
+# Installer les dépendances
+npm install
 
-### Run your tests
+# Lancer le serveur sur l'adresse localhost:8080
+npm run serve
 ```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
