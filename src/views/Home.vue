@@ -7,6 +7,9 @@
       <div class="row">
         <p style="font-size: 12px; margin-top: -8px">Parcours des articles</p>
       </div>
+      <div class="row">
+        <vs-button @click="signOut">Déconnexion</vs-button>
+      </div>
     </div>
 
     <div class="container">
@@ -77,10 +80,17 @@
 </template>
 
 <script>
-// @ is an alias to /src
+import firebase from 'firebase'
 
 export default {
   name: 'Home',
+  methods: {
+    signOut: function () {
+      firebase.auth().signOut().then(() => {
+        this.$router.replace('login')
+      });
+    }
+  }
 }
 </script>
 

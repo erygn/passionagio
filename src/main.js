@@ -17,8 +17,21 @@ Vue.use(Vuesax, {
 })
 Vue.config.productionTip = false
 
-new Vue({
-  router,
-  vuetify,
-  render: h => h(App)
-}).$mount('#app')
+let app = '';
+
+firebase.auth().onAuthStateChanged(() => {
+  if (!app) {
+    app = new Vue({
+      router,
+      vuetify,
+      render: h => h(App)
+    }).$mount('#app');
+  }
+})
+
+
+// new Vue({
+//   router,
+//   vuetify,
+//   render: h => h(App)
+// }).$mount('#app')
